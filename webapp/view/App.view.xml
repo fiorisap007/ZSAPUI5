@@ -1,0 +1,27 @@
+<!-- Librerias sap.m , sap.ui.core.mvc -->
+<mvc:View 
+    controllerName="com.dprb.logali.ZSAPUI5.controller.App"
+    xmlns="sap.m" 
+    xmlns:mvc="sap.ui.core.mvc">
+	
+    <Text text="Hello word desde XML"/>
+    
+    <!-- "{i18n>} con clic derecho, se puede ir a i18n-->
+    <Button text="{i18n>showHelloButtonText}" press=".onShowHello"/>
+                   
+    
+    <Input value ="{/recipient/name}"
+           description="Hello {/recipient/name}"
+           valueLiveUpdate="true"
+           width="60%"
+           id="Input01"
+    />
+    
+    <Input value ="{/recipientModel/name}"
+           description="Hello {/recipientModel/name}"
+           valueLiveUpdate="true"
+           width="60%"
+           id="Input02"
+    />  
+
+</mvc:View>
