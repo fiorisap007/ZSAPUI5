@@ -1,0 +1,30 @@
+<!-- crear una carpeta test/mockServer.html -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>SAP UI5 Titulo</title>
+	</head>
+	<body class = "sapUiBody" id = "content">
+		
+		
+	    <div data-sap-ui-component 
+             data-name="com.dprb.logali.ZSAPUI05" 
+             data-id="container"
+             data-setting='{"id": "com.dprb.logali"}'
+        ></div>
+
+		 <!--data-sap-ui-theme="sap_belize_plus" -->
+    	 <script id="sap-ui-bootstrap"
+                src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+             
+                data-sap-ui-theme="sap_belize_plus" 
+                data-sap-ui-resourceroots='{"com.dprb.logali.ZSAPUI05": "../"}' 
+                data-sap-ui-compatVersion="edge"
+                data-sap-ui-bindingSyntax = "complex"
+                data-sap-ui-oninit="module:com/dprb/logali/ZSAPUI05/test/initMockServer"
+                data-sap-ui-async="true"
+                data-sap-ui-frameOptions="trusted" >
+        </script>    
+	</body>
+</html>

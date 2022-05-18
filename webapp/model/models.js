@@ -5,13 +5,11 @@ sap.ui.define(
 		return {
 			createRecipientModel: function () {
 				var oData = {
-					recipientModel: {
+					recipient: {
 						name: "Angel"
 					}
 				};
-				
-				// var oModel = new JSONModel(oData);
-				// return oModel;
+
 				return new JSONModel(oData);
 				
 			}

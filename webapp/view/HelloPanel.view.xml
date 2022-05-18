@@ -1,0 +1,48 @@
+<!--HelloPanel.view.xml-->
+<!-- Librerias sap.m , sap.ui.core.mvc -->
+<mvc:View controllerName="com.dprb.logali.ZSAPUI05.controller.HelloPanel" 
+          xmlns="sap.m" 
+          xmlns:mvc="sap.ui.core.mvc" 
+          xmlns:core="sap.ui.core"
+          >
+
+		<Panel  headerText="{i18n>helloPanelTitle}" 
+			    class="sapUiResponsiveMargin" 
+				width="auto"
+				expandable="{device>/system/phone}"
+				expanded="{= !${device>/system/phone}}"
+				accessibleRole="Region"
+				>
+							
+			<content>
+				
+				<Button id="helloDialogButton"
+				        icon="sap-icon://world"
+				        text="{i18n>openDialogButtonText}"
+				        press=".onOpenDialog"
+						class="sapUiSmallMarginEnd sapUiVisibleOnlyOnDesktop"
+						                       
+						                           
+				 />
+
+				<!-- "{i18n>} con clic derecho, se puede ir a i18n-->
+				<Button text="{i18n>showHelloButtonText}" 
+						press=".onShowHello"
+						class="sapUiSmallMarginEnd sapUiHideOnDesktop"
+				 />
+				<Input  value="{/recipient/name}" 
+					    valueLiveUpdate="true" 
+						width="60%" 
+						id="Input02"
+								       
+				/>
+				<Text text="Hello {/recipient/name}"
+				      class="sapUiSmallMargin myCustomText sapTheminglight-asColor">
+								 	
+				</Text>      
+								 
+			</content>	     
+							       
+		</Panel>
+		<core:Fragment fragmentName="com.dprb.logali.ZSAPUI05.view.Form01" type="XML"></core:Fragment>			
+</mvc:View>
